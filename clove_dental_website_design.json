@@ -1,0 +1,905 @@
+{
+  "website": {
+    "meta": {
+      "title": "Best Dental Clinic Near You | [Clinic Name]",
+      "description": "Expert dental care with advanced technology. Treatments include braces, implants, root canals, teeth whitening, aligners & more. Book a free consultation today!",
+      "keywords": [
+        "dental clinic",
+        "dentist near me",
+        "dental implants",
+        "braces",
+        "teeth whitening",
+        "root canal",
+        "aligners",
+        "kids dentistry",
+        "smile makeover",
+        "dental checkup",
+        "orthodontist",
+        "pediatric dentistry"
+      ],
+      "schema": {
+        "type": "Dentist",
+        "additionalTypes": [
+          "LocalBusiness",
+          "MedicalBusiness"
+        ],
+        "note": "Add LocalBusiness, Dentist, FAQPage and Service schema markup for SEO"
+      }
+    },
+    "header": {
+      "topBar": {
+        "leftContent": "India's Most Trusted Dental Clinic",
+        "phone": "+91-XXXXXXXXXX",
+        "openDays": "Open on Weekends",
+        "ctaButton": {
+          "label": "Book Free Consultation",
+          "link": "/book-appointment",
+          "style": "primary"
+        }
+      },
+      "logo": {
+        "src": "/assets/images/logo.png",
+        "alt": "[Clinic Name] Logo",
+        "link": "/"
+      },
+      "navigation": [
+        {
+          "label": "Home",
+          "link": "/"
+        },
+        {
+          "label": "Treatments",
+          "link": "/treatments",
+          "dropdown": [
+            {
+              "category": "Restorative",
+              "items": [
+                {
+                  "label": "Dental Fillings",
+                  "link": "/treatments/dental-fillings"
+                },
+                {
+                  "label": "Root Canal Treatment",
+                  "link": "/treatments/root-canal"
+                },
+                {
+                  "label": "Dental Crowns & Bridges",
+                  "link": "/treatments/crowns-bridges"
+                },
+                {
+                  "label": "Dentures",
+                  "link": "/treatments/dentures"
+                }
+              ]
+            },
+            {
+              "category": "Cosmetic",
+              "items": [
+                {
+                  "label": "Teeth Whitening",
+                  "link": "/treatments/teeth-whitening"
+                },
+                {
+                  "label": "Smile Makeover",
+                  "link": "/treatments/smile-makeover"
+                },
+                {
+                  "label": "Veneers",
+                  "link": "/treatments/veneers"
+                },
+                {
+                  "label": "Laser Dentistry",
+                  "link": "/treatments/laser-dentistry"
+                }
+              ]
+            },
+            {
+              "category": "Orthodontics",
+              "items": [
+                {
+                  "label": "Braces (Metal / Ceramic)",
+                  "link": "/treatments/braces"
+                },
+                {
+                  "label": "Clear Aligners / Invisalign",
+                  "link": "/treatments/aligners"
+                },
+                {
+                  "label": "Retainers",
+                  "link": "/treatments/retainers"
+                }
+              ]
+            },
+            {
+              "category": "Surgical",
+              "items": [
+                {
+                  "label": "Dental Implants",
+                  "link": "/treatments/dental-implants"
+                },
+                {
+                  "label": "Tooth Extraction",
+                  "link": "/treatments/tooth-extraction"
+                },
+                {
+                  "label": "Wisdom Tooth Removal",
+                  "link": "/treatments/wisdom-tooth"
+                },
+                {
+                  "label": "Oral & Maxillofacial Surgery",
+                  "link": "/treatments/oral-surgery"
+                }
+              ]
+            },
+            {
+              "category": "Preventive & Specialty",
+              "items": [
+                {
+                  "label": "Dental Checkup & Cleaning",
+                  "link": "/treatments/dental-checkup"
+                },
+                {
+                  "label": "Advanced Gum Treatment",
+                  "link": "/treatments/gum-treatment"
+                },
+                {
+                  "label": "Kids Dentistry",
+                  "link": "/treatments/kids-dentistry"
+                },
+                {
+                  "label": "Oral Cancer Screening",
+                  "link": "/treatments/oral-cancer-screening"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Dental Plans",
+          "link": "/dental-plans",
+          "dropdown": [
+            {
+              "label": "Dental Health Plan",
+              "link": "/dental-plans/dental-health-plan"
+            },
+            {
+              "label": "Advanced Dental Health Plan",
+              "link": "/dental-plans/advanced-health-plan"
+            },
+            {
+              "label": "Corporate Dental Plans",
+              "link": "/dental-plans/corporate"
+            }
+          ]
+        },
+        {
+          "label": "Find a Clinic",
+          "link": "/clinics"
+        },
+        {
+          "label": "About Us",
+          "link": "/about",
+          "dropdown": [
+            {
+              "label": "About the Clinic",
+              "link": "/about"
+            },
+            {
+              "label": "Our Doctors",
+              "link": "/about/doctors"
+            },
+            {
+              "label": "Our Technology",
+              "link": "/about/technology"
+            },
+            {
+              "label": "Sterilization Protocol",
+              "link": "/about/sterilization"
+            }
+          ]
+        },
+        {
+          "label": "Patient Info",
+          "link": "/patient-info",
+          "dropdown": [
+            {
+              "label": "Patient Reviews",
+              "link": "/reviews"
+            },
+            {
+              "label": "FAQs",
+              "link": "/faq"
+            },
+            {
+              "label": "Dental Blog",
+              "link": "/blog"
+            },
+            {
+              "label": "EMI Options",
+              "link": "/emi"
+            }
+          ]
+        },
+        {
+          "label": "Contact",
+          "link": "/contact"
+        }
+      ]
+    },
+    "pages": {
+      "home": {
+        "heroBanner": {
+          "desktopImage": "/assets/banners/hero-desktop.webp",
+          "mobileImage": "/assets/banners/hero-mobile.webp",
+          "heading": "Smile Confidently with Expert Dental Care",
+          "subheading": "Advanced treatments. Gentle care. Affordable prices. Open on weekends.",
+          "cta": [
+            {
+              "label": "Book Free Consultation",
+              "link": "/book-appointment",
+              "type": "primary"
+            },
+            {
+              "label": "Find a Clinic Near You",
+              "link": "/clinics",
+              "type": "secondary"
+            }
+          ],
+          "trustBadges": [
+            "715+ Clinics Across India",
+            "1700+ Expert Dentists",
+            "3 Million+ Patients Served",
+            "Open on Weekends"
+          ]
+        },
+        "clinicLocatorSection": {
+          "heading": "Find a Clinic Near You",
+          "placeholder": "Enter your city or locality",
+          "buttonLabel": "Search",
+          "mapEnabled": true,
+          "note": "Uses Google Maps API or a custom clinic locator with city/pincode search"
+        },
+        "statsSection": {
+          "heading": "Trusted by Millions Across India",
+          "stats": [
+            {
+              "value": "715+",
+              "label": "Clinics Across India"
+            },
+            {
+              "value": "1700+",
+              "label": "Expert Dentists"
+            },
+            {
+              "value": "3M+",
+              "label": "Patients Served"
+            },
+            {
+              "value": "20L+",
+              "label": "Treatments Completed"
+            }
+          ]
+        },
+        "servicesSection": {
+          "heading": "Our Dental Treatments",
+          "subheading": "Comprehensive oral care for every need \u2014 from routine checkups to complex surgeries",
+          "services": [
+            {
+              "id": "dental-implants",
+              "title": "Dental Implants",
+              "description": "Permanent, natural-looking replacement for missing teeth. Done by experienced implantologists using advanced technology.",
+              "icon": "/assets/icons/implants.png",
+              "link": "/treatments/dental-implants",
+              "tag": "Most Popular"
+            },
+            {
+              "id": "braces-aligners",
+              "title": "Braces & Aligners",
+              "description": "Metal braces, ceramic braces, and clear aligners including Invisalign for a straighter, confident smile.",
+              "icon": "/assets/icons/braces.png",
+              "link": "/treatments/braces"
+            },
+            {
+              "id": "root-canal",
+              "title": "Root Canal Treatment",
+              "description": "Painless RCT using advanced rotary endodontics. Save your natural tooth with minimal discomfort.",
+              "icon": "/assets/icons/root-canal.png",
+              "link": "/treatments/root-canal"
+            },
+            {
+              "id": "teeth-whitening",
+              "title": "Teeth Whitening",
+              "description": "Professional-grade whitening for a visibly brighter smile in just one session.",
+              "icon": "/assets/icons/whitening.png",
+              "link": "/treatments/teeth-whitening"
+            },
+            {
+              "id": "smile-makeover",
+              "title": "Smile Makeover",
+              "description": "Transform your smile with a customised combination of cosmetic dental treatments.",
+              "icon": "/assets/icons/smile.png",
+              "link": "/treatments/smile-makeover"
+            },
+            {
+              "id": "kids-dentistry",
+              "title": "Kids Dentistry",
+              "description": "Gentle, child-friendly dental care by specialist pedodontists. Kid-safe environment with play areas.",
+              "icon": "/assets/icons/kids.png",
+              "link": "/treatments/kids-dentistry"
+            },
+            {
+              "id": "gum-treatment",
+              "title": "Advanced Gum Treatment",
+              "description": "Treatment for gum disease, bleeding gums, and periodontitis using laser and advanced techniques.",
+              "icon": "/assets/icons/gums.png",
+              "link": "/treatments/gum-treatment"
+            },
+            {
+              "id": "crowns-bridges",
+              "title": "Crowns & Bridges",
+              "description": "High-quality zirconia and ceramic crowns and bridges to restore damaged or missing teeth.",
+              "icon": "/assets/icons/crowns.png",
+              "link": "/treatments/crowns-bridges"
+            },
+            {
+              "id": "wisdom-tooth",
+              "title": "Wisdom Tooth Removal",
+              "description": "Safe and painless extraction of wisdom teeth by experienced oral surgeons.",
+              "icon": "/assets/icons/wisdom-tooth.png",
+              "link": "/treatments/wisdom-tooth"
+            },
+            {
+              "id": "laser-dentistry",
+              "title": "Laser Dentistry",
+              "description": "Minimally invasive laser treatments for gum reshaping, cavity treatment, and more.",
+              "icon": "/assets/icons/laser.png",
+              "link": "/treatments/laser-dentistry"
+            },
+            {
+              "id": "dental-checkup",
+              "title": "Dental Checkup & Cleaning",
+              "description": "Routine scaling, polishing, and oral examination to maintain a healthy mouth.",
+              "icon": "/assets/icons/checkup.png",
+              "link": "/treatments/dental-checkup",
+              "tag": "Free First Visit"
+            },
+            {
+              "id": "oral-surgery",
+              "title": "Oral & Maxillofacial Surgery",
+              "description": "Advanced surgical care for jaw disorders, facial trauma, oral cancer, and complex extractions.",
+              "icon": "/assets/icons/surgery.png",
+              "link": "/treatments/oral-surgery"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "heading": "Why Choose Us?",
+          "points": [
+            {
+              "title": "Expert Dentists",
+              "description": "1700+ highly qualified dentists including specialists for every procedure \u2014 orthodontists, implantologists, pedodontists, and more.",
+              "icon": "/assets/icons/doctor.png"
+            },
+            {
+              "title": "Advanced Technology",
+              "description": "State-of-the-art equipment including digital X-rays, laser dentistry, rotary endodontics, and 3D imaging for precise diagnosis.",
+              "icon": "/assets/icons/technology.png"
+            },
+            {
+              "title": "10x Sterilization Protocol",
+              "description": "Every instrument and surface is thoroughly sterilized before each patient \u2014 100% protection against cross-infection.",
+              "icon": "/assets/icons/sterilization.png"
+            },
+            {
+              "title": "Transparent Pricing",
+              "description": "No hidden costs. Clear treatment plans with upfront pricing and easy EMI options for major procedures.",
+              "icon": "/assets/icons/pricing.png"
+            },
+            {
+              "title": "Open on Weekends",
+              "description": "All clinics are open on Saturdays and Sundays for your convenience. Emergency dental care available.",
+              "icon": "/assets/icons/calendar.png"
+            },
+            {
+              "title": "Painless Treatments",
+              "description": "Latest pain management technology ensures a comfortable experience even for complex procedures like RCT and implants.",
+              "icon": "/assets/icons/painless.png"
+            }
+          ]
+        },
+        "dentalPlansSection": {
+          "heading": "Affordable Dental Health Plans",
+          "subheading": "Protect your smile year-round with our membership plans",
+          "plans": [
+            {
+              "name": "Dental Health Plan",
+              "price": "\u20b9[Price]/year",
+              "features": [
+                "Annual dental checkup",
+                "Scaling & polishing",
+                "X-rays included",
+                "Discounts on treatments"
+              ],
+              "cta": {
+                "label": "Know More",
+                "link": "/dental-plans/dental-health-plan"
+              }
+            },
+            {
+              "name": "Advanced Dental Health Plan",
+              "price": "\u20b9[Price]/year",
+              "features": [
+                "Everything in basic plan",
+                "Priority appointments",
+                "Higher treatment discounts",
+                "Family coverage available"
+              ],
+              "cta": {
+                "label": "Know More",
+                "link": "/dental-plans/advanced-health-plan"
+              },
+              "tag": "Best Value"
+            },
+            {
+              "name": "Corporate Dental Plan",
+              "price": "Custom pricing",
+              "features": [
+                "On-site dental care",
+                "Group health coverage",
+                "Customized plans for teams",
+                "Dedicated account manager"
+              ],
+              "cta": {
+                "label": "Contact Us",
+                "link": "/dental-plans/corporate"
+              }
+            }
+          ]
+        },
+        "appointmentSteps": {
+          "heading": "Book an Appointment in 3 Simple Steps",
+          "steps": [
+            {
+              "step": 1,
+              "title": "Find Your Nearest Clinic",
+              "description": "Use the clinic locator to find the most convenient Clove Dental clinic in your city or locality.",
+              "icon": "/assets/icons/location.png"
+            },
+            {
+              "step": 2,
+              "title": "Book Online or Call",
+              "description": "Fill in the appointment form on the website or call our helpline to confirm your slot.",
+              "icon": "/assets/icons/booking.png"
+            },
+            {
+              "step": 3,
+              "title": "Visit & Get Treated",
+              "description": "Walk in at your scheduled time. First consultation is free. Get your treatment plan same day.",
+              "icon": "/assets/icons/clinic.png"
+            }
+          ]
+        },
+        "doctorsSection": {
+          "heading": "Our Expert Dentists",
+          "subheading": "Specialists in every field of dentistry \u2014 trained, certified, and compassionate",
+          "specializations": [
+            "General Dentist",
+            "Orthodontist",
+            "Implantologist",
+            "Periodontist",
+            "Endodontist",
+            "Pedodontist (Kids Dentist)",
+            "Oral & Maxillofacial Surgeon",
+            "Prosthodontist"
+          ],
+          "cta": {
+            "label": "Meet Our Doctors",
+            "link": "/about/doctors"
+          }
+        },
+        "testimonialsSection": {
+          "heading": "What Our Patients Say",
+          "subheading": "Over 3 million smiles transformed across India",
+          "testimonials": [
+            {
+              "name": "Patient Name",
+              "city": "City",
+              "treatment": "Dental Implants",
+              "review": "Placeholder \u2014 replace with real patient review.",
+              "rating": 5,
+              "photo": "/assets/testimonials/patient1.jpg"
+            },
+            {
+              "name": "Patient Name",
+              "city": "City",
+              "treatment": "Braces",
+              "review": "Placeholder \u2014 replace with real patient review.",
+              "rating": 5,
+              "photo": "/assets/testimonials/patient2.jpg"
+            },
+            {
+              "name": "Patient Name",
+              "city": "City",
+              "treatment": "Root Canal",
+              "review": "Placeholder \u2014 replace with real patient review.",
+              "rating": 5,
+              "photo": "/assets/testimonials/patient3.jpg"
+            }
+          ],
+          "aggregateRating": {
+            "ratingValue": "4.8",
+            "reviewCount": "50000+",
+            "platform": "Google Reviews"
+          }
+        },
+        "blogSection": {
+          "heading": "Dental Health Tips & Guides",
+          "subheading": "Expert advice from our dentists to help you maintain a healthy smile",
+          "cta": {
+            "label": "View All Articles",
+            "link": "/blog"
+          },
+          "sampleTopics": [
+            "How often should you visit a dentist?",
+            "Metal braces vs clear aligners \u2014 which is right for you?",
+            "Signs you might need a root canal",
+            "How to care for your teeth after whitening",
+            "Kids' dental care guide for parents"
+          ]
+        },
+        "faqSection": {
+          "heading": "Frequently Asked Questions",
+          "faqs": [
+            {
+              "question": "Is the first dental consultation free?",
+              "answer": "Yes, we regularly offer free consultations and checkups for first-time visitors. Please check our website or call your nearest clinic to confirm current offers."
+            },
+            {
+              "question": "Are your clinics open on weekends?",
+              "answer": "Yes, all Clove Dental clinics are open on Saturdays and Sundays. Timings may vary by location \u2014 check your nearest clinic for exact hours."
+            },
+            {
+              "question": "Do you offer EMI for dental treatments?",
+              "answer": "Yes, we offer easy EMI options for major dental treatments. We accept cash, debit/credit cards, UPI, and EMI through leading banks."
+            },
+            {
+              "question": "Are the dentists qualified and experienced?",
+              "answer": "Yes, all our dentists are highly qualified with BDS/MDS degrees and undergo regular training in the latest dental techniques. We have specialists for every procedure."
+            },
+            {
+              "question": "Do you offer kids dental treatment?",
+              "answer": "Yes, we have specialized pediatric dentists (pedodontists) and offer complete family dental care. Some clinics also have kids play areas to ease anxiety."
+            },
+            {
+              "question": "How do I find the nearest clinic?",
+              "answer": "Use the 'Find a Clinic' feature on our website \u2014 enter your city or pincode to find the nearest clinic with directions, contact numbers, and timings."
+            },
+            {
+              "question": "Are emergency dental services available?",
+              "answer": "Yes, we provide emergency dental services to address urgent dental issues promptly. Call our helpline for immediate assistance."
+            },
+            {
+              "question": "What sterilization standards do you follow?",
+              "answer": "We follow a 10x sterilization protocol \u2014 every instrument and surface that comes in contact with patients is thoroughly sterilized before each appointment."
+            },
+            {
+              "question": "What types of aligners do you offer?",
+              "answer": "We offer various aligner brands including Invisalign, Whistle, and ClearCorrect by Straumann, tailored to individual needs and budgets."
+            },
+            {
+              "question": "Is root canal treatment painful?",
+              "answer": "No \u2014 with modern rotary endodontics and advanced pain management technology, RCT at our clinics is essentially painless and usually completed in 1-2 visits."
+            }
+          ]
+        },
+        "mapAndContactSection": {
+          "heading": "Find Us",
+          "clinicLocatorEnabled": true,
+          "googleMapsEmbed": "PASTE_GOOGLE_MAPS_EMBED_URL",
+          "phone": "+91-XXXXXXXXXX",
+          "email": "contact@[clinicdomain].com",
+          "workingHours": {
+            "weekdays": "10:00 AM \u2013 7:00 PM",
+            "saturday": "10:00 AM \u2013 6:00 PM",
+            "sunday": "10:00 AM \u2013 4:00 PM"
+          }
+        }
+      }
+    },
+    "appointmentForm": {
+      "heading": "Book Your Free Consultation",
+      "fields": [
+        {
+          "name": "fullName",
+          "type": "text",
+          "label": "Full Name",
+          "required": true
+        },
+        {
+          "name": "mobile",
+          "type": "tel",
+          "label": "Mobile Number",
+          "required": true
+        },
+        {
+          "name": "city",
+          "type": "text",
+          "label": "Your City",
+          "required": true
+        },
+        {
+          "name": "treatment",
+          "type": "select",
+          "label": "Treatment Needed",
+          "required": false,
+          "options": [
+            "Dental Checkup",
+            "Dental Implants",
+            "Braces / Aligners",
+            "Root Canal",
+            "Teeth Whitening",
+            "Smile Makeover",
+            "Kids Dentistry",
+            "Gum Treatment",
+            "Crowns & Bridges",
+            "Wisdom Tooth Removal",
+            "Other"
+          ]
+        },
+        {
+          "name": "preferredDate",
+          "type": "date",
+          "label": "Preferred Date",
+          "required": false
+        },
+        {
+          "name": "timeSlot",
+          "type": "select",
+          "label": "Preferred Time",
+          "required": false,
+          "options": [
+            "Morning (10AM-1PM)",
+            "Afternoon (1PM-4PM)",
+            "Evening (4PM-7PM)"
+          ]
+        }
+      ],
+      "submitButton": "Book Free Consultation",
+      "disclaimer": "By submitting, you agree to be contacted by our team to confirm your appointment.",
+      "privacyPolicyLink": "/privacy-policy"
+    },
+    "footer": {
+      "logo": "/assets/images/logo-white.png",
+      "tagline": "India's most trusted dental clinic \u2014 expert care for every smile.",
+      "sections": [
+        {
+          "heading": "Treatments",
+          "links": [
+            {
+              "label": "Dental Implants",
+              "link": "/treatments/dental-implants"
+            },
+            {
+              "label": "Braces & Aligners",
+              "link": "/treatments/braces"
+            },
+            {
+              "label": "Root Canal",
+              "link": "/treatments/root-canal"
+            },
+            {
+              "label": "Teeth Whitening",
+              "link": "/treatments/teeth-whitening"
+            },
+            {
+              "label": "Smile Makeover",
+              "link": "/treatments/smile-makeover"
+            },
+            {
+              "label": "Kids Dentistry",
+              "link": "/treatments/kids-dentistry"
+            }
+          ]
+        },
+        {
+          "heading": "Quick Links",
+          "links": [
+            {
+              "label": "About Us",
+              "link": "/about"
+            },
+            {
+              "label": "Find a Clinic",
+              "link": "/clinics"
+            },
+            {
+              "label": "Dental Plans",
+              "link": "/dental-plans"
+            },
+            {
+              "label": "Book Appointment",
+              "link": "/book-appointment"
+            },
+            {
+              "label": "Dental Blog",
+              "link": "/blog"
+            },
+            {
+              "label": "Careers",
+              "link": "/careers"
+            }
+          ]
+        },
+        {
+          "heading": "Patient Resources",
+          "links": [
+            {
+              "label": "Patient Reviews",
+              "link": "/reviews"
+            },
+            {
+              "label": "FAQs",
+              "link": "/faq"
+            },
+            {
+              "label": "EMI Options",
+              "link": "/emi"
+            },
+            {
+              "label": "Privacy Policy",
+              "link": "/privacy-policy"
+            },
+            {
+              "label": "Terms & Conditions",
+              "link": "/terms"
+            }
+          ]
+        },
+        {
+          "heading": "Contact",
+          "phone": "+91-XXXXXXXXXX",
+          "email": "contact@[clinicdomain].com",
+          "address": "[Clinic Address], [City] - [PIN]",
+          "socialMedia": [
+            {
+              "platform": "Facebook",
+              "url": "https://facebook.com/"
+            },
+            {
+              "platform": "Instagram",
+              "url": "https://instagram.com/"
+            },
+            {
+              "platform": "YouTube",
+              "url": "https://youtube.com/"
+            },
+            {
+              "platform": "Twitter/X",
+              "url": "https://twitter.com/"
+            }
+          ]
+        }
+      ],
+      "bottomBar": {
+        "copyright": "\u00a9 2026 [Clinic Name]. All rights reserved.",
+        "certifications": [
+          "Member \u2014 Royal Society of Medicine, UK",
+          "ISO Certified",
+          "NABH Accredited"
+        ]
+      }
+    },
+    "colorScheme": {
+      "palette": {
+        "darkNavy": "#003B5C",
+        "mediumBlue": "#005A8C",
+        "brightBlue": "#008CBE",
+        "lightGrey": "#D5E3E8",
+        "white": "#FFFFFF"
+      },
+      "primary": "#008CBE",
+      "primaryDark": "#005A8C",
+      "primaryDarker": "#003B5C",
+      "primaryLight": "#D5E3E8",
+      "primaryPale": "#EEF5F8",
+      "text": "#003B5C",
+      "textLight": "#5A7A8C",
+      "textOnPrimary": "#FFFFFF",
+      "background": "#FFFFFF",
+      "backgroundSecondary": "#EEF5F8",
+      "border": "#D5E3E8",
+      "success": "#28A745",
+      "error": "#DC3545",
+      "usage": {
+        "topBar": "#003B5C",
+        "topBarText": "#FFFFFF",
+        "navbar": "#FFFFFF",
+        "navbarText": "#003B5C",
+        "navbarActiveLink": "#008CBE",
+        "heroBannerOverlay": "#003B5C at 65% opacity",
+        "heroBannerText": "#FFFFFF",
+        "ctaButtonPrimary": "#008CBE",
+        "ctaButtonPrimaryHover": "#005A8C",
+        "ctaButtonSecondary": "#FFFFFF with #008CBE border",
+        "sectionHeadings": "#003B5C",
+        "sectionSubheadings": "#005A8C",
+        "statsBackground": "#003B5C",
+        "statsText": "#FFFFFF",
+        "statsAccentValue": "#008CBE",
+        "cardBackground": "#FFFFFF",
+        "cardBorder": "#D5E3E8",
+        "cardIconBackground": "#EEF5F8",
+        "cardIconColor": "#008CBE",
+        "alternateSection": "#EEF5F8",
+        "footerBackground": "#003B5C",
+        "footerText": "#FFFFFF",
+        "footerLinkHover": "#D5E3E8",
+        "inputBorder": "#D5E3E8",
+        "inputFocus": "#008CBE",
+        "badgeBackground": "#D5E3E8",
+        "badgeText": "#003B5C",
+        "divider": "#D5E3E8"
+      }
+    },
+    "typography": {
+      "headingFont": "Nunito or Poppins (friendly, modern, approachable)",
+      "bodyFont": "Inter or Open Sans (clean, highly readable)",
+      "headingSizes": {
+        "h1": "48px",
+        "h2": "36px",
+        "h3": "24px",
+        "h4": "18px"
+      }
+    },
+    "designNotes": {
+      "tone": "Friendly, clean, and trust-building. Dental websites need to reduce anxiety \u2014 use soft whites, calm blues, and smiling patient imagery. Avoid harsh reds or overly clinical aesthetics.",
+      "mobileFirst": "70%+ of dental website traffic is mobile. Design mobile layout first. 'Book Now' and phone number must be visible without scrolling on mobile.",
+      "keyFeatures": [
+        "Clinic locator with city/pincode search \u2014 critical for a multi-location clinic",
+        "Floating 'Book Appointment' button always visible on mobile",
+        "Free consultation badge prominently displayed",
+        "'Open on Weekends' trust badge in header",
+        "EMI availability mentioned near expensive treatments (implants, aligners)",
+        "Before/after smile gallery for cosmetic treatments",
+        "Doctor profile pages with photos, qualifications, and specializations",
+        "Google Reviews aggregate rating displayed prominently"
+      ],
+      "pagesNeeded": [
+        "/",
+        "/about",
+        "/about/doctors",
+        "/about/technology",
+        "/about/sterilization",
+        "/treatments",
+        "/treatments/dental-implants",
+        "/treatments/braces",
+        "/treatments/aligners",
+        "/treatments/root-canal",
+        "/treatments/teeth-whitening",
+        "/treatments/smile-makeover",
+        "/treatments/crowns-bridges",
+        "/treatments/gum-treatment",
+        "/treatments/kids-dentistry",
+        "/treatments/wisdom-tooth",
+        "/treatments/laser-dentistry",
+        "/treatments/dental-checkup",
+        "/treatments/oral-surgery",
+        "/treatments/dentures",
+        "/dental-plans",
+        "/dental-plans/dental-health-plan",
+        "/dental-plans/advanced-health-plan",
+        "/dental-plans/corporate",
+        "/clinics",
+        "/book-appointment",
+        "/reviews",
+        "/faq",
+        "/blog",
+        "/emi",
+        "/contact",
+        "/careers",
+        "/privacy-policy",
+        "/terms"
+      ]
+    }
+  }
+}

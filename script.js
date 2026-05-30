@@ -84,6 +84,62 @@
     );
   }
 
+  /* ——— Hero image slider ——— */
+  const slider = document.querySelector('.image-slider');
+  if (slider) {
+    const slides = Array.from(slider.querySelectorAll('.image-slider__slide'));
+    const dots = Array.from(slider.querySelectorAll('.image-slider__dot'));
+    const prevBtn = slider.querySelector('.image-slider__button--prev');
+    const nextBtn = slider.querySelector('.image-slider__button--next');
+    let currentIndex = 0;
+    let sliderTimer = null;
+
+    const setSlide = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('image-slider__slide--active', idx === currentIndex);
+      });
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('image-slider__dot--active', idx === currentIndex);
+      });
+    };
+
+    const changeSlide = (offset) => {
+      setSlide(currentIndex + offset);
+    };
+
+    const startSlider = () => {
+      sliderTimer = window.setInterval(() => changeSlide(1), 6000);
+    };
+
+    const resetSlider = () => {
+      if (sliderTimer) {
+        window.clearInterval(sliderTimer);
+      }
+      startSlider();
+    };
+
+    prevBtn?.addEventListener('click', () => {
+      changeSlide(-1);
+      resetSlider();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      changeSlide(1);
+      resetSlider();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        setSlide(index);
+        resetSlider();
+      });
+    });
+
+    setSlide(0);
+    startSlider();
+  }
+
   /* ——— Phone display elements ——— */
   document.querySelectorAll('[data-phone-display]').forEach((el) => {
     el.textContent = CONFIG.phoneDisplay;

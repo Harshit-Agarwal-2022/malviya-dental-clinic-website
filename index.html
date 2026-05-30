@@ -54,20 +54,48 @@
     <!-- Hero -->
     <section class="hero" id="home">
       <div class="hero__overlay"></div>
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Welcome to Malviya Dental Clinic</p>
-        <h1>Smile Confidently with Expert Dental Care</h1>
-        <p class="hero__sub">Advanced treatments. Gentle care. Affordable prices. Led by <strong>Dr Deepesh Agrawal</strong>.</p>
-        <div class="hero__cta">
-          <button type="button" class="btn btn--primary btn--lg" data-book-btn>Book Appointment</button>
-          <button type="button" class="btn btn--outline btn--lg" data-call-btn>Call Us</button>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Welcome to Malviya Dental Clinic</p>
+          <h1>Smile Confidently with Expert Dental Care</h1>
+          <p class="hero__sub">Advanced treatments. Gentle care. Affordable prices. Led by <strong>Dr Deepesh Agrawal</strong>.</p>
+          <div class="hero__cta">
+            <button type="button" class="btn btn--primary btn--lg" data-book-btn>Book Appointment</button>
+            <button type="button" class="btn btn--outline btn--lg" data-call-btn>Call Us</button>
+          </div>
+          <ul class="hero__badges">
+            <li>25+ Years Experience</li>
+            <li>Painless Treatments</li>
+            <li>Malviya Nagar, Jaipur</li>
+            <li>Transparent Pricing</li>
+          </ul>
         </div>
-        <ul class="hero__badges">
-          <li>25+ Years Experience</li>
-          <li>Painless Treatments</li>
-          <li>Malviya Nagar, Jaipur</li>
-          <li>Transparent Pricing</li>
-        </ul>
+        <div class="hero__media">
+          <div class="image-slider" aria-label="Featured clinic image slider">
+            <div class="image-slider__slide image-slider__slide--active">
+              <img src="assets/images/Screenshot 2026-05-27 021754.png" alt="Dental clinic interior" loading="lazy">
+            </div>
+            <div class="image-slider__slide">
+              <img src="assets/images/Screenshot 2026-05-27 021937.png" alt="Dentist and patient consultation" loading="lazy">
+            </div>
+            <div class="image-slider__slide">
+              <img src="assets/images/Screenshot 2026-05-27 022048.png" alt="Modern dental treatment room" loading="lazy">
+            </div>
+            <div class="image-slider__slide">
+              <img src="assets/images/Screenshot 2026-05-27 022142.png" alt="Smiling patient with dentist" loading="lazy">
+            </div>
+            <div class="image-slider__controls">
+              <button type="button" class="image-slider__button image-slider__button--prev" aria-label="Previous image">‹</button>
+              <button type="button" class="image-slider__button image-slider__button--next" aria-label="Next image">›</button>
+            </div>
+            <div class="image-slider__dots" aria-label="Slide navigation">
+              <button type="button" class="image-slider__dot image-slider__dot--active" aria-label="Slide 1"></button>
+              <button type="button" class="image-slider__dot" aria-label="Slide 2"></button>
+              <button type="button" class="image-slider__dot" aria-label="Slide 3"></button>
+              <button type="button" class="image-slider__dot" aria-label="Slide 4"></button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -492,5 +520,34 @@
   </div>
 
   <script src="script.js"></script>
+
+  <!-- chatbot -->
+
+  <div id="chat-btn" onclick="toggleChat()">
+  <i class="ti ti-message-circle"></i>
+</div>
+
+<div id="chat-popup">
+  <div id="chat-header">
+    <div id="chat-header-left">
+      <div id="chat-avatar">🦷</div>
+      <div>
+        <p id="chat-name">Malviya Dental Assistant</p>
+        <p id="chat-status">Powered by AI</p>
+      </div>
+    </div>
+    <button onclick="toggleChat()" id="chat-close">✕</button>
+  </div>
+  <div id="chat-window"></div>
+  <div id="chat-chips"></div>
+  <div id="chat-input-row">
+    <input type="text" id="chat-input" placeholder="Ask anything..." />
+    <button id="chat-send" onclick="handleSend()">Send</button>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<script src="chatbot.js"></script>
+
 </body>
 </html>

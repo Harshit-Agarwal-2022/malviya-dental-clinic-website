@@ -4,19 +4,20 @@
 const SYSTEM_PROMPT = `You are a friendly and helpful assistant for Malviya Dental Clinic. Answer patient queries conversationally and concisely.
 
 Doctor: Dr. Deepesh Agrawal (BDS, MDS)
-Timings: Mon-Sat, 9PM-9AM. Sunday 9AM-1PM.
-Location: H.H.-75, Main Calgiri Road, Near Spring Dale's Institute, Calgiri Marg, Malviya Nagar, Jaipur, Rajasthan — 302017
+Timings: Mon-Sat, 9AM to 2 PM and 5:00PM to 9:00PM 
+Sunday : By appointment
+Location: A- 92 , main calgiri road, in front of Calgiri eye hospital , Malviya Nagar, Jaipur, Rajasthan — 302017
 Phone & WhatsApp: +91 93140 90002
 
 Services & Pricing:
-- Consultation: Free
-- Cleaning & Scaling: ₹800
-- Tooth Extraction: ₹500-₹1,500
-- Root Canal: ₹3,000-₹6,000
-- Dental Filling: ₹600-₹1,200
-- Teeth Whitening: ₹4,000
-- Braces & Aligners: ₹25,000 onwards
-- Dental Implants: ₹30,000 per tooth
+- Consultation: 300/-
+- Cleaning & Scaling: ₹2000/-
+- Tooth Extraction: ₹ 1200/- to 6000/-
+- Root Canal: ₹4,000-₹6,000
+- Dental Filling: ₹800-₹1,500
+- Teeth Whitening: ₹6000/Arch
+- Braces & Aligners: ₹40,000 onwards
+- Dental Implants: ₹30,000 - 50000/- per tooth
 - Pediatric Dentistry: ₹500 onwards
 
 Rules:

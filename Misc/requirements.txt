@@ -1,17 +1,38 @@
-photos on landing ✅
+======================================================================
+🏥 SMILECARE DENTAL CLINIC — PROJECT REQUIREMENTS & CHECKLIST
+======================================================================
 
-photos videos for treatment 
-chatbot ✅
-motion effects
+[✅] COMPLETED MILESTONES
+----------------------------------------------------------------------
+* Landing Page Assets: Core photos integrated on the landing hero section.
+* AI Assistance Chatbot: Deployed with custom system prompt logic.
 
 
-new section
+[⏳] PENDING DELIVERABLES (CURRENT SPRINT)
+----------------------------------------------------------------------
 
-achievements
-discounts pop up 
-partner section
-leave a google review
+1. MEDIA & VISUAL ENHANCEMENTS
+   * Finalize landing page hero photos.
+   * Add page-wise / service-wise educational photos and videos for specific treatments.
+   * Embed patient testimonial videos.
+   * Make the website more dynamic, colorful, and implement smooth motion effects.
 
-qr code
+2. COMMUNICATION & ENGAGEMENT SOLUTIONS
+   * Integrate a persistent floating WhatsApp chat button across ALL pages.
+   * Update the AI chatbot floating button text to: "How can we help you? / Chat with us".
 
-"How can we help you ? / Chat with us " on AI assistance button
+3. NEW MARKETING SECTIONS
+   * Build a promotional discount/offers pop-up modal.
+   * Create an Achievements section (e.g., successful cases, years of service).
+   * Design a Corporate Partner logo section.
+
+4. REPUTATION & GOOGLE REVIEW GROWTH TOOLS
+   * Add a direct "Leave a Google Review" call-to-action link.
+   * Generate and place a scannable QR code linking to the Google review page.
+
+======================================================================
+DEVELOPER NOTE:
+Register the global floating WhatsApp icon and the updated AI button text 
+directly in the root layout file so they render effortlessly across 
+all service-specific subpages without manual code duplication.
+======================================================================

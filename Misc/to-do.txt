@@ -1,0 +1,15 @@
+📃 to do list
+
+1️⃣ Delete unwanted branches
+
+2️⃣ fix all known issues and test on mobile
+
+3️⃣ add "Chat with us" message on AI assistant
+
+4️⃣️ create leave a google review section 
+
+5️⃣ add images to all services cards and create seperate pages for all with an educational video of the procedure and images
+
+6️⃣ Update knowledge base ✅
+
+7️⃣ Update dental clinic timings ✅

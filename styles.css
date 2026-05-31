@@ -1349,8 +1349,8 @@ a:hover {
 
 #chat-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 80px;
+  right: 20px;
   width: 52px;
   height: 52px;
   background: #185FA5;
@@ -1369,7 +1369,7 @@ a:hover {
   display: none;
   flex-direction: column;
   position: fixed;
-  bottom: 88px;
+  bottom: 140px;
   right: 24px;
   width: 320px;
 

@@ -40,9 +40,20 @@ const MODELS = [
 const history = [];
 const defaultChips = ["Timings", "Services", "Pricing", "Book appointment", "Location"];
 
+function isChatOpen() {
+  const popup = document.getElementById("chat-popup");
+  return popup && popup.style.display === "flex";
+}
+
 function toggleChat() {
   const popup = document.getElementById("chat-popup");
-  popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+  const willOpen = popup.style.display !== "flex";
+  popup.style.display = willOpen ? "flex" : "none";
+  
+  // Push history state when opening chat
+  if (willOpen) {
+    window.history.pushState({ modalType: 'chat' }, '');
+  }
 }
 
 function addMsg(text, sender) {
@@ -161,6 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Enter") handleSend();
   });
 
-  addMsg("Hi! Ask me anything about SmileCare Dental Clinic — services, pricing, timings and more!", "bot");
+  addMsg("Hi! Ask me anything about Malviya Dental Clinic — services, pricing, timings and more!", "bot");
   setChips(defaultChips);
 });

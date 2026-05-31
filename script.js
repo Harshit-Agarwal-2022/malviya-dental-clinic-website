@@ -54,12 +54,16 @@
       const open = mainNav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', open);
       navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      // Prevent scrolling when nav is open
+      document.body.style.overflow = open ? 'hidden' : '';
     });
 
     const closeNav = () => {
       mainNav.classList.remove('is-open');
       navToggle.setAttribute('aria-expanded', 'false');
       navToggle.setAttribute('aria-label', 'Open menu');
+      // Re-enable scrolling when nav closes
+      document.body.style.overflow = '';
     };
 
     mainNav.querySelectorAll('a').forEach((link) => {
@@ -212,6 +216,8 @@
     if (firstField) {
       window.setTimeout(() => firstField.focus(), 300);
     }
+    // Push history state when opening form
+    window.history.pushState({ modalType: 'form' }, '');
   };
 
   const hideAppointmentModal = () => {
@@ -219,6 +225,10 @@
     appointmentModal.classList.remove('is-visible');
     appointmentModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+  };
+
+  const isAppointmentModalOpen = () => {
+    return appointmentModal?.classList.contains('is-visible');
   };
 
   document.querySelectorAll('[data-book-btn]').forEach((btn) => {
@@ -297,6 +307,22 @@
       hideAppointmentModal();
     });
   }
+
+  /* ——— Back button handler for closing modals ——— */
+  window.addEventListener('popstate', (e) => {
+    const isChatOpen = () => {
+      const popup = document.getElementById('chat-popup');
+      return popup && popup.style.display === 'flex';
+    };
+
+    if (isAppointmentModalOpen()) {
+      hideAppointmentModal();
+      window.history.pushState(null, '');
+    } else if (isChatOpen()) {
+      document.getElementById('chat-popup').style.display = 'none';
+      window.history.pushState(null, '');
+    }
+  });
 
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;

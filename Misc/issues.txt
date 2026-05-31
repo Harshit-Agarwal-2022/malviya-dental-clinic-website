@@ -1,8 +1,0 @@
-📱 Mobile issues
-
-1️⃣ When back button is hit webapp closes instead if form is opened it should go back to landing page and if chatbot is opened it should just close.
-
-2️⃣ Call button coincides with chatbot button
-
-3️⃣ user can slide on the webpage even if the navbar menu is opened
-

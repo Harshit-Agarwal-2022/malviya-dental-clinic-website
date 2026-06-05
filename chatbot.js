@@ -48,12 +48,22 @@ function isChatOpen() {
 function toggleChat() {
   const popup = document.getElementById("chat-popup");
   const willOpen = popup.style.display !== "flex";
+  const chatToolTip = document.querySelector("#chat-tooltip");
+
   popup.style.display = willOpen ? "flex" : "none";
   
   // Push history state when opening chat
   if (willOpen) {
     window.history.pushState({ modalType: 'chat' }, '');
   }
+
+  // Hide chat tool tip if visible
+
+  if(chatToolTip.style.display != "none")
+    chatToolTip.style.display = "none";
+
+
+
 }
 
 function addMsg(text, sender) {
@@ -167,6 +177,15 @@ function handleSend() {
   if (val) sendMessage(val);
 }
 
+function showChatTooltip() {
+  const tooltip = document.getElementById('chat-tooltip');
+  if (!tooltip) return;
+  tooltip.classList.add('visible');
+  window.setTimeout(() => {
+    tooltip.classList.add('fadeout');
+  }, 10000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("chat-input").addEventListener("keydown", e => {
     if (e.key === "Enter") handleSend();
@@ -174,4 +193,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   addMsg("Hi! Ask me anything about Malviya Dental Clinic — services, pricing, timings and more!", "bot");
   setChips(defaultChips);
+  showChatTooltip();
 });

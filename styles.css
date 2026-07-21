@@ -708,6 +708,115 @@ a:hover {
   font-weight: 700;
 }
 
+/* Achievements */
+.achievements {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.achievements__viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.achievements__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.achievement-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  background: var(--off-white-elevated);
+  border: 1px solid var(--light-grey);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.achievement-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: var(--primary-pale);
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.achievement-card__value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--bright-blue);
+  margin-bottom: 8px;
+}
+
+.achievement-card__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--dark-navy);
+  margin-bottom: 12px;
+}
+
+.achievement-card__desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.achievements__arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--dark-navy);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.achievements__arrow:hover,
+.achievements__arrow:focus {
+  transform: scale(1.05);
+  background: var(--bright-blue);
+  color: var(--white);
+}
+
+.achievements__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.achievements__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--bright-blue);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.achievements__dot--active {
+  background: var(--bright-blue);
+}
+
 /* Steps */
 .steps {
   display: grid;

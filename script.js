@@ -144,6 +144,40 @@
     startSlider();
   }
 
+  /* ——— Achievements slider ——— */
+  const achievements = document.querySelector('.achievements');
+  if (achievements) {
+    const track = achievements.querySelector('.achievements__track');
+    const cards = Array.from(achievements.querySelectorAll('.achievement-card'));
+    const prevBtn = achievements.querySelector('.achievements__arrow--prev');
+    const nextBtn = achievements.querySelector('.achievements__arrow--next');
+    const dotsWrap = achievements.parentElement.querySelector('.achievements__dots');
+    let achieveIndex = 0;
+
+    const dots = cards.map((_, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'achievements__dot';
+      dot.setAttribute('aria-label', `Achievement ${index + 1}`);
+      dot.addEventListener('click', () => setAchievement(index));
+      dotsWrap?.appendChild(dot);
+      return dot;
+    });
+
+    const setAchievement = (index) => {
+      achieveIndex = (index + cards.length) % cards.length;
+      track.style.transform = `translateX(-${achieveIndex * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('achievements__dot--active', idx === achieveIndex);
+      });
+    };
+
+    prevBtn?.addEventListener('click', () => setAchievement(achieveIndex - 1));
+    nextBtn?.addEventListener('click', () => setAchievement(achieveIndex + 1));
+
+    setAchievement(0);
+  }
+
   /* ——— Phone display elements ——— */
   document.querySelectorAll('[data-phone-display]').forEach((el) => {
     el.textContent = CONFIG.phoneDisplay;

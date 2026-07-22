@@ -1688,7 +1688,7 @@ a:hover {
   display: grid;
   gap: 28px;
   align-items: center;
-  padding: 36px 0 44px;
+  padding: 36px 20px 44px;
 }
 
 .article-hero__eyebrow {
@@ -2155,7 +2155,7 @@ a:hover {
 @media (min-width: 768px) {
   .article-hero__inner {
     grid-template-columns: 3fr 2fr;
-    padding: 52px 0 60px;
+    padding: 52px 20px 60px;
   }
 
   .media-text {

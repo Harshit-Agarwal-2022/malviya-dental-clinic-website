@@ -2321,3 +2321,62 @@ a:hover {
     right: -10px;
   }
 }
+
+/* ——— WhatsApp floating widget (sits above the AI chat widget) ——— */
+#whatsapp-btn-wrapper {
+  position: fixed;
+  bottom: 142px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  z-index: 900;
+}
+
+#whatsapp-tooltip {
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #003b5c;
+  border-radius: 999px;
+  padding: 10px 14px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+#whatsapp-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#whatsapp-tooltip.fadeout {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+#whatsapp-btn {
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#whatsapp-btn:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}

@@ -320,6 +320,8 @@
       window.history.pushState(null, '');
     } else if (isChatOpen()) {
       document.getElementById('chat-popup').style.display = 'none';
+      const waWrapper = document.getElementById('whatsapp-btn-wrapper');
+      if (waWrapper) waWrapper.style.display = 'flex';
       window.history.pushState(null, '');
     }
   });
@@ -395,4 +397,36 @@
   };
 
   initPromoPopup();
+
+  /* ——— WhatsApp chat widget (sits above the AI chat widget) ——— */
+  const initWhatsappWidget = () => {
+    const wrapper = document.createElement('div');
+    wrapper.id = 'whatsapp-btn-wrapper';
+
+    const chatUrl = buildWhatsAppUrl(
+      `Hi ${CONFIG.clinicName}, I'd like to know more about your dental services.`
+    );
+
+    wrapper.innerHTML = `
+      <div id="whatsapp-tooltip" aria-hidden="true">Chat with us on WhatsApp</div>
+      <a id="whatsapp-btn" href="${chatUrl}" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <i class="ti ti-brand-whatsapp" aria-hidden="true"></i>
+      </a>
+    `;
+
+    document.body.appendChild(wrapper);
+
+    const tooltip = wrapper.querySelector('#whatsapp-tooltip');
+
+    // Show the tooltip for the same duration as the AI chat tooltip (~10s)
+    window.requestAnimationFrame(() => tooltip.classList.add('visible'));
+    window.setTimeout(() => tooltip.classList.add('fadeout'), 10000);
+
+    // Hide the tooltip once the user heads to WhatsApp
+    wrapper.querySelector('#whatsapp-btn').addEventListener('click', () => {
+      tooltip.classList.add('fadeout');
+    });
+  };
+
+  initWhatsappWidget();
 })();

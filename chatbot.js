@@ -49,6 +49,7 @@ function toggleChat() {
   const popup = document.getElementById("chat-popup");
   const willOpen = popup.style.display !== "flex";
   const chatToolTip = document.querySelector("#chat-tooltip");
+  const whatsappWrapper = document.getElementById("whatsapp-btn-wrapper");
 
   popup.style.display = willOpen ? "flex" : "none";
   
@@ -62,7 +63,9 @@ function toggleChat() {
   if(chatToolTip.style.display != "none")
     chatToolTip.style.display = "none";
 
-
+  // Hide the WhatsApp button while the AI chat is open to avoid overlap
+  if (whatsappWrapper)
+    whatsappWrapper.style.display = willOpen ? "none" : "flex";
 
 }
 

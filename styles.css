@@ -2174,3 +2174,64 @@ a:hover {
     order: 2;
   }
 }
+
+/* Mobile only (phones): in image/video sections show the heading first,
+   then the image/video, then the text content / buttons.
+   Tablet and laptop layouts (>=768px) are left unchanged. */
+@media (max-width: 767.98px) {
+  /* Article hero: eyebrow + title, then image, then subtitle + buttons */
+  .article-hero__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .article-hero__content {
+    display: contents;
+  }
+
+  .article-hero__eyebrow {
+    order: 1;
+  }
+
+  .article-hero__title {
+    order: 2;
+  }
+
+  .article-hero__media {
+    order: 3;
+    margin-bottom: 24px;
+  }
+
+  .article-hero__subtitle {
+    order: 4;
+  }
+
+  .article-hero__cta {
+    order: 5;
+  }
+
+  /* Media + text rows (what-is-it, aftercare): heading, then image, then text */
+  .media-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .media-text__body {
+    display: contents;
+  }
+
+  .media-text .section-heading {
+    order: 1;
+  }
+
+  .media-text__media {
+    order: 2;
+    margin-bottom: 20px;
+  }
+
+  .media-text__body > * {
+    order: 3;
+  }
+}

@@ -2131,10 +2131,13 @@ a:hover {
   aspect-ratio: 16 / 9;
 }
 
-.procedure-video video {
+.procedure-video video,
+.procedure-video iframe,
+.procedure-video__player {
   width: 100%;
   height: 100%;
   display: block;
+  border: 0;
   object-fit: cover;
 }
 

@@ -429,4 +429,96 @@
   };
 
   initWhatsappWidget();
+
+  /* ——— Procedure video: YouTube, muted, plays only while in view ——— */
+  const initProcedureVideos = () => {
+    const mounts = Array.from(
+      document.querySelectorAll('.procedure-video__player[data-youtube-id]')
+    );
+    if (!mounts.length) return;
+
+    // Accept a full YouTube link (watch, youtu.be, embed, shorts) or a plain 11-char ID
+    const extractYouTubeId = (value) => {
+      if (!value) return '';
+      value = value.trim();
+      if (/^[a-zA-Z0-9_-]{11}$/.test(value)) return value;
+      try {
+        const url = new URL(value);
+        const host = url.hostname.replace(/^www\./, '');
+        if (host === 'youtu.be') return url.pathname.slice(1);
+        if (url.searchParams.get('v')) return url.searchParams.get('v');
+        const parts = url.pathname.split('/').filter(Boolean);
+        const key = ['embed', 'shorts', 'v'].find((k) => parts.includes(k));
+        if (key) return parts[parts.indexOf(key) + 1] || '';
+      } catch (err) {
+        /* not a valid URL — treat as no video (e.g. placeholder text) */
+      }
+      return '';
+    };
+
+    const targets = mounts
+      .map((el) => ({ el, id: extractYouTubeId(el.getAttribute('data-youtube-id')) }))
+      .filter((t) => t.id);
+    if (!targets.length) return;
+
+    // Play when at least half the player is on screen, pause otherwise
+    const observePlayer = (player) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (typeof player.playVideo !== 'function') return;
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+              player.mute();
+              player.playVideo();
+            } else {
+              player.pauseVideo();
+            }
+          });
+        },
+        { threshold: [0, 0.5] }
+      );
+      observer.observe(player.getIframe());
+    };
+
+    const buildPlayers = () => {
+      targets.forEach(({ el, id }) => {
+        new YT.Player(el, {
+          videoId: id,
+          playerVars: {
+            mute: 1,
+            controls: 0,
+            disablekb: 1,
+            rel: 0,
+            modestbranding: 1,
+            playsinline: 1,
+            loop: 1,
+            playlist: id
+          },
+          events: {
+            onReady: (e) => {
+              e.target.mute();
+              observePlayer(e.target);
+            }
+          }
+        });
+      });
+    };
+
+    if (window.YT && window.YT.Player) {
+      buildPlayers();
+    } else {
+      const previousReady = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (typeof previousReady === 'function') previousReady();
+        buildPlayers();
+      };
+      if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(tag);
+      }
+    }
+  };
+
+  initProcedureVideos();
 })();

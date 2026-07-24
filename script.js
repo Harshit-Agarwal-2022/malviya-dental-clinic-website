@@ -339,4 +339,60 @@
     const today = new Date().toISOString().split('T')[0];
     preferredDate.setAttribute('min', today);
   }
+
+  /* ——— Promotional pop-up (random image shown on every page load) ——— */
+  const PROMO_POPUP = {
+    folder: 'assets/images/pop-ups/',
+    // List every image available in the pop-ups folder.
+    // To add a new pop-up, drop the file in the folder and add its name here.
+    images: ['pop-up-1.jpg', 'pop-up-2.jpg']
+  };
+
+  const initPromoPopup = () => {
+    if (!PROMO_POPUP.images.length) return;
+
+    const randomImage =
+      PROMO_POPUP.images[Math.floor(Math.random() * PROMO_POPUP.images.length)];
+
+    const popup = document.createElement('div');
+    popup.className = 'promo-popup';
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-modal', 'true');
+    popup.setAttribute('aria-label', 'Special announcement');
+    popup.innerHTML = `
+      <div class="promo-popup__box">
+        <button type="button" class="promo-popup__close" aria-label="Close pop-up">&times;</button>
+        <img class="promo-popup__img" src="${PROMO_POPUP.folder}${randomImage}" alt="Special offer from ${CONFIG.clinicName}">
+      </div>
+    `;
+
+    document.body.appendChild(popup);
+
+    const closePopup = () => {
+      popup.classList.remove('is-visible');
+      document.body.style.overflow = '';
+      window.setTimeout(() => popup.remove(), 300);
+      document.removeEventListener('keydown', onKeydown);
+    };
+
+    const onKeydown = (e) => {
+      if (e.key === 'Escape') closePopup();
+    };
+
+    popup.addEventListener('click', (e) => {
+      // Close when clicking the backdrop (outside the image box)
+      if (e.target === popup) closePopup();
+    });
+
+    popup.querySelector('.promo-popup__close').addEventListener('click', closePopup);
+    document.addEventListener('keydown', onKeydown);
+
+    // Reveal after it's in the DOM so the transition plays
+    window.requestAnimationFrame(() => {
+      popup.classList.add('is-visible');
+      document.body.style.overflow = 'hidden';
+    });
+  };
+
+  initPromoPopup();
 })();

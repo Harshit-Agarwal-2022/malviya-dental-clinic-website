@@ -146,6 +146,45 @@ a:hover {
   display: none;
 }
 
+.nabh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nabh-badge img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nabh-badge:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
+.nabh-badge--top {
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+.nabh-badge--footer {
+  margin-top: 16px;
+  color: var(--white);
+}
+
+.nabh-badge--footer img {
+  width: 48px;
+  height: 48px;
+}
+
 .top-bar__right {
   display: flex;
   align-items: center;
@@ -506,6 +545,20 @@ a:hover {
   opacity: 0.9;
 }
 
+.stat--nabh {
+  grid-column: 1 / -1;
+}
+
+.stat__logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: block;
+}
+
 /* Sections */
 .section {
   padding: 64px 0;
@@ -623,6 +676,14 @@ a:hover {
 .feature__icon {
   font-size: 2.5rem;
   margin-bottom: 16px;
+}
+
+.feature__icon--logo img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
 }
 
 .feature h3 {
@@ -747,6 +808,18 @@ a:hover {
   border-radius: 50%;
   font-size: 2rem;
   margin-bottom: 20px;
+}
+
+.achievement-card__icon--logo {
+  background: var(--white);
+  width: 96px;
+  height: 96px;
+}
+
+.achievement-card__icon--logo img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
 }
 
 .achievement-card__value {
@@ -1097,6 +1170,115 @@ a:hover {
   opacity: 0.8;
 }
 
+/* NABH certification */
+.nabh-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nabh-section__logo {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.nabh-section__logo img {
+  width: 144px;
+  height: 144px;
+  object-fit: contain;
+}
+
+.nabh-section__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bright-blue);
+  margin-bottom: 8px;
+}
+
+.nabh-section__copy h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 16px;
+}
+
+.nabh-section__copy p {
+  color: var(--text-light);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.nabh-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.nabh-pillars__item {
+  background: var(--white);
+  border: 1px solid var(--light-grey);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.nabh-pillars__item h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.nabh-pillars__item p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.nabh-strip {
+  background: var(--white);
+  border-bottom: 1px solid var(--light-grey);
+  padding: 16px 0;
+}
+
+.nabh-strip__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.nabh-strip img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+.nabh-strip p {
+  color: var(--dark-navy);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.nabh-strip a {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Floating CTA */
 .floating-cta {
   position: fixed;
@@ -1409,7 +1591,32 @@ a:hover {
   }
 
   .stats__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .stat--nabh {
+    grid-column: auto;
+  }
+
+  .nabh-section__inner {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  .nabh-section__copy p {
+    margin: 0;
+  }
+
+  .nabh-pillars {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nabh-strip__inner {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 16px;
   }
 
   .services-grid {
@@ -1448,6 +1655,10 @@ a:hover {
 
 @media (min-width: 1024px) {
   .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nabh-pillars {
     grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -9,6 +9,8 @@ Sunday : By appointment
 Location: A- 92 , main calgiri road, in front of Calgiri eye hospital , Malviya Nagar, Jaipur, Rajasthan — 302017
 Phone & WhatsApp: +91 93140 90002
 
+Certification: Malviya Dental Clinic is NABH certified (National Accreditation Board for Hospitals & Healthcare Providers, Quality Council of India). This means independent assessment of patient safety, infection control, trained staff, and quality of care. Do not invent certificate numbers, dates, or extra accreditations.
+
 Services & Pricing:
 - Consultation: 300/-
 - Cleaning & Scaling: ₹2000/-

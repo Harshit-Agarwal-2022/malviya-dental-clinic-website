@@ -1588,8 +1588,14 @@ a:hover {
 
   .nabh-section__inner {
     flex-direction: row;
+    justify-content: center;
     text-align: left;
     align-items: center;
+    gap: 40px;
+  }
+
+  .nabh-section__copy {
+    max-width: 640px;
   }
 
   .nabh-section__copy p {

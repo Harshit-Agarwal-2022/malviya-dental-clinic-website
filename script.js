@@ -92,19 +92,33 @@
   const slider = document.querySelector('.image-slider');
   if (slider) {
     const slides = Array.from(slider.querySelectorAll('.image-slider__slide'));
-    const dots = Array.from(slider.querySelectorAll('.image-slider__dot'));
     const prevBtn = slider.querySelector('.image-slider__button--prev');
     const nextBtn = slider.querySelector('.image-slider__button--next');
     let currentIndex = 0;
     let sliderTimer = null;
 
+    // Slides after the first keep their URLs in data-* so only the first image downloads on page open
+    const loadSlide = (index) => {
+      const slide = slides[(index + slides.length) % slides.length];
+      slide.querySelectorAll('[data-srcset]').forEach((el) => {
+        el.srcset = el.dataset.srcset;
+        el.removeAttribute('data-srcset');
+      });
+      slide.querySelectorAll('[data-src]').forEach((el) => {
+        el.src = el.dataset.src;
+        el.removeAttribute('data-src');
+      });
+    };
+
     const setSlide = (index) => {
       currentIndex = (index + slides.length) % slides.length;
+      loadSlide(currentIndex);
+      if (document.readyState === 'complete') {
+        loadSlide(currentIndex + 1);
+        loadSlide(currentIndex - 1);
+      }
       slides.forEach((slide, idx) => {
         slide.classList.toggle('image-slider__slide--active', idx === currentIndex);
-      });
-      dots.forEach((dot, idx) => {
-        dot.classList.toggle('image-slider__dot--active', idx === currentIndex);
       });
     };
 
@@ -133,15 +147,12 @@
       resetSlider();
     });
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        setSlide(index);
-        resetSlider();
-      });
-    });
-
     setSlide(0);
     startSlider();
+    window.addEventListener('load', () => {
+      loadSlide(currentIndex + 1);
+      loadSlide(currentIndex - 1);
+    });
   }
 
   /* ——— Achievements slider ——— */

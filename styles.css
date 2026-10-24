@@ -409,6 +409,12 @@ a:hover {
   z-index: 1;
 }
 
+.image-slider__slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .image-slider__slide img {
   width: 100%;
   height: 100%;
@@ -445,30 +451,6 @@ a:hover {
 .image-slider__button:focus {
   transform: scale(1.05);
   background: var(--white);
-}
-
-.image-slider__dots {
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 5;
-}
-
-.image-slider__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.65);
-  cursor: pointer;
-}
-
-.image-slider__dot--active {
-  background: var(--bright-blue);
-  border-color: var(--white);
 }
 
 .hero__eyebrow {
@@ -723,11 +705,16 @@ a:hover {
   background: var(--primary-pale);
 }
 
+.doctor-card__photo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .doctor-card__photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
   display: block;
 }
 
@@ -2465,6 +2452,11 @@ a:hover {
   font-size: 0.85rem;
   color: var(--text-light);
   text-align: center;
+}
+
+/* Space between stacked videos on the same page */
+.procedure-video__caption + .procedure-video {
+  margin-top: 32px;
 }
 
 @media (min-width: 640px) {

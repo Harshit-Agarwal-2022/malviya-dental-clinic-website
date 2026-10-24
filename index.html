@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" type="image/webp" imagesrcset="assets/images/gallery-images/img-1-sm.webp 640w, assets/images/gallery-images/img-1.webp 1200w" imagesizes="(min-width: 768px) 50vw, calc(100vw - 40px)" fetchpriority="high">
 </head>
 <body>
   <!-- Top bar -->
@@ -88,26 +89,140 @@
         <div class="hero__media">
           <div class="image-slider" aria-label="Featured clinic image slider">
             <div class="image-slider__slide image-slider__slide--active">
-              <img src="assets/images/Screenshot 2026-05-27 021754.png" alt="Dental clinic interior" loading="lazy">
+              <picture>
+                <source type="image/webp" srcset="assets/images/gallery-images/img-1-sm.webp 640w, assets/images/gallery-images/img-1.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img src="assets/images/gallery-images/img-1.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 1" fetchpriority="high" decoding="async">
+              </picture>
             </div>
             <div class="image-slider__slide">
-              <img src="assets/images/Screenshot 2026-05-27 021937.png" alt="Dentist and patient consultation" loading="lazy">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-2-sm.webp 640w, assets/images/gallery-images/img-2.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-2.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 2" decoding="async">
+              </picture>
             </div>
             <div class="image-slider__slide">
-              <img src="assets/images/Screenshot 2026-05-27 022048.png" alt="Modern dental treatment room" loading="lazy">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-3-sm.webp 640w, assets/images/gallery-images/img-3.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-3.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 3" decoding="async">
+              </picture>
             </div>
             <div class="image-slider__slide">
-              <img src="assets/images/Screenshot 2026-05-27 022142.png" alt="Smiling patient with dentist" loading="lazy">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-4-sm.webp 640w, assets/images/gallery-images/img-4.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-4.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 4" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-5-sm.webp 640w, assets/images/gallery-images/img-5.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-5.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 5" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-6-sm.webp 640w, assets/images/gallery-images/img-6.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-6.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 6" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-7-sm.webp 640w, assets/images/gallery-images/img-7.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-7.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 7" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-8-sm.webp 640w, assets/images/gallery-images/img-8.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-8.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 8" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-9-sm.webp 640w, assets/images/gallery-images/img-9.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-9.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 9" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-10-sm.webp 640w, assets/images/gallery-images/img-10.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-10.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 10" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-11-sm.webp 640w, assets/images/gallery-images/img-11.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-11.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 11" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-12-sm.webp 640w, assets/images/gallery-images/img-12.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-12.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 12" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-13-sm.webp 640w, assets/images/gallery-images/img-13.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-13.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 13" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-14-sm.webp 640w, assets/images/gallery-images/img-14.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-14.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 14" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-15-sm.webp 640w, assets/images/gallery-images/img-15.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-15.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 15" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-16-sm.webp 640w, assets/images/gallery-images/img-16.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-16.jpg" width="900" height="1200" alt="Malviya Dental Clinic photo 16" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-17-sm.webp 640w, assets/images/gallery-images/img-17.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-17.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 17" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-18-sm.webp 640w, assets/images/gallery-images/img-18.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-18.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 18" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-19-sm.webp 640w, assets/images/gallery-images/img-19.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-19.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 19" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-20-sm.webp 640w, assets/images/gallery-images/img-20.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-20.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 20" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-21-sm.webp 640w, assets/images/gallery-images/img-21.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-21.jpg" width="1200" height="900" alt="Malviya Dental Clinic photo 21" decoding="async">
+              </picture>
+            </div>
+            <div class="image-slider__slide">
+              <picture>
+                <source type="image/webp" data-srcset="assets/images/gallery-images/img-22-sm.webp 640w, assets/images/gallery-images/img-22.webp 1200w" sizes="(min-width: 768px) 50vw, calc(100vw - 40px)">
+                <img data-src="assets/images/gallery-images/img-22.jpg" width="866" height="1200" alt="Malviya Dental Clinic photo 22" decoding="async">
+              </picture>
             </div>
             <div class="image-slider__controls">
               <button type="button" class="image-slider__button image-slider__button--prev" aria-label="Previous image">‹</button>
               <button type="button" class="image-slider__button image-slider__button--next" aria-label="Next image">›</button>
-            </div>
-            <div class="image-slider__dots" aria-label="Slide navigation">
-              <button type="button" class="image-slider__dot image-slider__dot--active" aria-label="Slide 1"></button>
-              <button type="button" class="image-slider__dot" aria-label="Slide 2"></button>
-              <button type="button" class="image-slider__dot" aria-label="Slide 3"></button>
-              <button type="button" class="image-slider__dot" aria-label="Slide 4"></button>
             </div>
           </div>
         </div>
@@ -299,13 +414,17 @@
         </header>
         <div class="doctor-card">
           <div class="doctor-card__photo">
-            <img
-              src="assets/images/dr-deepesh-agrawal.png"
-              alt="Dr Deepesh Agrawal — Dentist at Malviya Dental Clinic"
-              width="200"
-              height="200"
-              loading="lazy"
-            >
+            <picture>
+              <source type="image/webp" srcset="assets/images/dr-deepesh/dr-deepesh-agrawal.webp">
+              <img
+                src="assets/images/dr-deepesh/dr-deepesh-agrawal.jpg"
+                alt="Dr Deepesh Agrawal — Dentist at Malviya Dental Clinic"
+                width="200"
+                height="200"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
           </div>
           <div class="doctor-card__info">
             <h3>Dr Deepesh Agrawal</h3>

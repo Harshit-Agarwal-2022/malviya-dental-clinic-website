@@ -17,7 +17,7 @@
   --radius: 12px;
   --radius-sm: 8px;
   --header-height: 72px;
-  --top-bar-height: 40px;
+  --top-bar-height: 0px; /* top bar is hidden on mobile; set to 40px from 768px up */
 }
 
 *,
@@ -124,6 +124,7 @@ a:hover {
 
 /* Top bar */
 .top-bar {
+  display: none;
   background: var(--dark-navy);
   color: var(--white);
   font-size: 0.8rem;
@@ -1523,8 +1524,16 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  :root {
+    --top-bar-height: 40px;
+  }
+
   body {
     padding-bottom: 0;
+  }
+
+  .top-bar {
+    display: block;
   }
 
   .top-bar__tagline {

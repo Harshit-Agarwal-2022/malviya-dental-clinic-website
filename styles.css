@@ -1184,6 +1184,7 @@ a:hover {
   width: 144px;
   height: 144px;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 .nabh-section__eyebrow {
